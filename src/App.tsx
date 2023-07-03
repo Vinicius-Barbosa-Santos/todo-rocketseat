@@ -43,6 +43,11 @@ const App = () => {
     setItems(listItems)
   }
 
+  const handleDelete = (id: number) => {
+    const listItems = items.filter((item) => item.id !== id)
+    setItems(listItems)
+  }
+
   return (
     <div className={styles.container}>
       <header>
@@ -53,6 +58,7 @@ const App = () => {
         <Content 
           items={items}  
           handleChecked={handleChecked}
+          handleDelete={handleDelete}
         />
       </main>
     </div>
