@@ -1,0 +1,22 @@
+.headerContainer {
+    height: 200px;
+    background-color: var(--gray-700);
+}
+
+.headerImage {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.headerImage img {
+    height: 3rem;
+    width: 7.875rem;
+}
+
+.inputContainer {
+    display: flex;
+    margin-top: -27px;
+    justify-content: center;
+}

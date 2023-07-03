@@ -1,0 +1,119 @@
+.contentMain {
+    display: flex;
+    margin: 0 auto;
+    max-width: 90rem;
+    justify-content: center;
+}
+
+.contentTaskFlex {
+    width: 46rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: calc(4rem + 1.688rem);
+}
+
+.contentTask {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.taskCreated,
+.finishTask {
+    gap: 0.5rem;
+    display: flex;
+}
+
+.taskCreated>span,
+.spanFinish {
+    display: flex;
+    font-weight: bold;
+    font-size: 0.875rem;
+    align-items: center;
+}
+
+.taskCreated>span {
+    color: var(--blue);
+}
+
+.spanFinish {
+    color: var(--purple);
+}
+
+.quantity {
+    width: 1.5rem;
+    height: 1.188rem;
+    border-radius: 50%;
+}
+
+.quantityOfTask {
+    width: 3.125rem;
+    height: 1.25rem;
+    border-radius: 10px;
+}
+
+.quantity,
+.quantityOfTask {
+    display: flex;
+    font-weight: bold;
+    font-size: 0.75rem;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--gray-400);
+}
+
+.todoEmpty {
+    width: 100%;
+    background-color: var(--gray-600);
+}
+
+.todoEmpty .line {
+    width: 100%;
+    margin-top: 1.5rem;
+    border-radius: 20px 20px 0px 0px;
+    border: 1px solid var(--gray-400);
+}
+
+.todoEmptyImage {
+    display: flex;
+    margin: 4rem 0 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.todoEmptyText {
+    display: flex;
+    font-size: 1rem;
+    text-align: center;
+    margin: 1rem 0 4rem;
+    align-items: center;
+    color: var(--gray-300);
+    justify-content: center;
+    flex-direction: column;
+}
+
+.items {
+    margin-top: 1.5rem;
+}
+
+@media(max-width: 780px) {
+    .contentTask, .items {
+        padding: 0 1.25rem;
+    }
+}
+
+@media(max-width: 360px) {
+    .contentTask {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .taskCreated {
+        margin-bottom: 0.625rem;
+    }
+
+    .todoEmptyText {
+        max-width: 200px;
+        margin: 1.25rem auto;
+    }
+}

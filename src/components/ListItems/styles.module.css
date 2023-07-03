@@ -1,0 +1,72 @@
+.listItems {
+    height: 72px;
+    display: flex;
+    margin: 0.75rem 0;
+    padding: 0.938rem;
+    border-radius: 8px;
+    justify-content: space-between;
+    background-color: var(--gray-500);
+}
+
+.listItems input[type="checkbox"] {
+    width: 1.25rem;
+    height: 1.25rem;
+    display: flex;
+    flex-shrink: 0;
+    cursor: pointer;
+    appearance: none;
+    border-radius: 50%;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--blue);
+}
+
+.listItems input[type="checkbox"]::before {
+    content: '';
+    opacity: 0;
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 50%;
+    position: absolute;
+    background-color: var(--purple-dark);
+}
+
+.listItems input[type="checkbox"]:checked:before {
+    opacity: 1;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('../../assets/check.svg');
+}
+
+.item {
+    font-size: 0.875rem;
+    margin: -0.188rem 1.25rem 0 0.75rem;
+}
+
+.trash {
+    cursor: pointer;
+    flex-shrink: 0;
+    font-size: 1.25rem;
+    margin-left: 1.25rem;
+    color: var(--gray-300);
+}
+
+.trash:hover {
+    color: var(--danger);
+}
+
+@media(max-width: 768px) {
+    .listItems {
+        height: auto;
+        align-items: center;
+    }
+
+    .item {
+        overflow-wrap: break-word;
+    }
+
+    .trash {
+        margin: 0;
+    } 
+}
