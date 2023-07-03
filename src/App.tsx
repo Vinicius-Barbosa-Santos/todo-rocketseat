@@ -5,6 +5,8 @@ import Content from "./components/Content"
 // import CSS Modules
 import './css/global.css'
 import styles from './App.module.css'
+
+// import React
 import { useState } from "react"
 
 const App = () => {
@@ -36,6 +38,11 @@ const App = () => {
     },
   ])
 
+  const handleChecked = (id: number) => {
+    const listItems = items.map((item) => item.id === id ? {...item, checked : !item.checked} : item)
+    setItems(listItems)
+  }
+
   return (
     <div className={styles.container}>
       <header>
@@ -45,6 +52,7 @@ const App = () => {
       <main>
         <Content 
           items={items}  
+          handleChecked={handleChecked}
         />
       </main>
     </div>

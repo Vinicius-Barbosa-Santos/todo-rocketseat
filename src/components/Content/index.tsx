@@ -9,9 +9,10 @@ import clipboard from '../../assets/clipboard.svg'
 
 interface Props {
     items: ItemListType[],
+    handleChecked: (id: number) => void
 }
 
-const Content = ({ items }: Props) => {
+const Content = ({ items, handleChecked }: Props) => {
     console.log(items)
 
     return (
@@ -47,9 +48,10 @@ const Content = ({ items }: Props) => {
                 {items.length > 0 &&
                     <div className={styles.items}>
                         {items.map((item) => (
-                            <ListItems 
-                                key={item.id} 
-                                item={item} 
+                            <ListItems
+                                key={item.id}
+                                item={item}
+                                handleChecked={handleChecked}
                             />
                         ))}
                     </div>
