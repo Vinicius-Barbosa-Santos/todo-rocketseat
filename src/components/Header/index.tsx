@@ -7,7 +7,11 @@ import Input from '../Input'
 // import Assets
 import logo from '../../assets/logo.svg'
 
-const Header = () => {
+interface Props {
+    handleAddTask: (item: string) => void
+}
+
+const Header = ({ handleAddTask }: Props) => {
     return (
         <div className={styles.headerContainer}>
             <div className={styles.headerImage}>
@@ -15,7 +19,7 @@ const Header = () => {
             </div>
 
             <div className={styles.inputContainer}>
-                <Input />
+                <Input handleAddTask={handleAddTask} />
             </div>
         </div>
     )

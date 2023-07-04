@@ -10,7 +10,11 @@ interface Props {
     handleDelete: (id: number) => void
 }
 
-const ListItems = ({ item, handleChecked, handleDelete }: Props) => {
+const ListItems = ({ 
+        item, 
+        handleChecked, 
+        handleDelete 
+    }: Props) => {
     return (
         <div className={styles.listItems}>
             <input

@@ -1,8 +1,8 @@
 .listItems {
-    height: 72px;
+    height: auto;
     display: flex;
-    margin: 0.75rem 0;
-    padding: 0.938rem;
+    margin: 0.75rem;
+    padding: 1rem;
     border-radius: 8px;
     justify-content: space-between;
     background-color: var(--gray-500);
@@ -41,7 +41,7 @@
 
 .item {
     font-size: 0.875rem;
-    margin: -0.188rem 1.25rem 0 0.75rem;
+    margin: -0.178rem 1.25rem 0 0.954rem;
 }
 
 .trash {

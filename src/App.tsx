@@ -39,7 +39,7 @@ const App = () => {
   ])
 
   const handleChecked = (id: number) => {
-    const listItems = items.map((item) => item.id === id ? {...item, checked : !item.checked} : item)
+    const listItems = items.map((item) => item.id === id ? { ...item, checked: !item.checked } : item)
     setItems(listItems)
   }
 
@@ -48,15 +48,24 @@ const App = () => {
     setItems(listItems)
   }
 
+  const handleAddTask = (item: string) => {
+    const id = items.length ? items[items.length - 1].id + 1 : 1
+    const newArrayList = { id, checked: false, item }
+    const listItems = [...items, newArrayList]
+    setItems(listItems)
+  }
+
   return (
     <div className={styles.container}>
       <header>
-        <Header />
+        <Header
+          handleAddTask={handleAddTask}
+        />
       </header>
 
       <main>
-        <Content 
-          items={items}  
+        <Content
+          items={items}
           handleChecked={handleChecked}
           handleDelete={handleDelete}
         />

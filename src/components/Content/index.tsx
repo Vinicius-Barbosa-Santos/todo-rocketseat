@@ -13,9 +13,11 @@ interface Props {
     handleDelete: (id: number) => void
 }
 
-const Content = ({ items, handleChecked, handleDelete }: Props) => {
-    console.log(items)
-
+const Content = ({ 
+        items, 
+        handleChecked, 
+        handleDelete 
+    }: Props) => {
     return (
         <div className={styles.contentMain}>
             <div className={styles.contentTaskFlex}>
