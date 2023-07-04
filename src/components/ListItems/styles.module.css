@@ -1,8 +1,8 @@
 .listItems {
     height: auto;
     display: flex;
-    margin: 0.75rem;
     padding: 1rem;
+    margin: 0.75rem;
     border-radius: 8px;
     justify-content: space-between;
     background-color: var(--gray-500);

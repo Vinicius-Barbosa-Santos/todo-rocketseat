@@ -10,33 +10,8 @@ import styles from './App.module.css'
 import { useState } from "react"
 
 const App = () => {
-  const [items, setItems] = useState([
-    {
-      id: 1,
-      checked: false,
-      item: 'Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.'
-    },
-    {
-      id: 2,
-      checked: false,
-      item: 'Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.'
-    },
-    {
-      id: 3,
-      checked: false,
-      item: 'Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.'
-    },
-    {
-      id: 4,
-      checked: false,
-      item: 'Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.'
-    },
-    {
-      id: 5,
-      checked: false,
-      item: 'Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.'
-    },
-  ])
+  const [tasks, setTask] = useState<number>(0)
+  const [items, setItems] = useState<ItemListType[]>([])
 
   const handleChecked = (id: number) => {
     const listItems = items.map((item) => item.id === id ? { ...item, checked: !item.checked } : item)
@@ -46,6 +21,7 @@ const App = () => {
   const handleDelete = (id: number) => {
     const listItems = items.filter((item) => item.id !== id)
     setItems(listItems)
+    setTask(tasks - 1)
   }
 
   const handleAddTask = (item: string) => {
@@ -53,6 +29,7 @@ const App = () => {
     const newArrayList = { id, checked: false, item }
     const listItems = [...items, newArrayList]
     setItems(listItems)
+    setTask(tasks + 1)
   }
 
   return (
@@ -66,6 +43,7 @@ const App = () => {
       <main>
         <Content
           items={items}
+          tasks={tasks}
           handleChecked={handleChecked}
           handleDelete={handleDelete}
         />

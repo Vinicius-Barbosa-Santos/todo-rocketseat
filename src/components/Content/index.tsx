@@ -9,12 +9,14 @@ import clipboard from '../../assets/clipboard.svg'
 
 interface Props {
     items: ItemListType[],
+    tasks: number
     handleChecked: (id: number) => void,
     handleDelete: (id: number) => void
 }
 
 const Content = ({ 
         items, 
+        tasks,
         handleChecked, 
         handleDelete 
     }: Props) => {
@@ -24,7 +26,7 @@ const Content = ({
                 <div className={styles.contentTask}>
                     <div className={styles.taskCreated}>
                         <span>Tarefas criadas</span>
-                        <div className={styles.quantity}>5</div>
+                        <div className={styles.quantity}>{tasks}</div>
                     </div>
 
                     <div className={styles.finishTask}>
