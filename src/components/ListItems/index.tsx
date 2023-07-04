@@ -16,7 +16,10 @@ const ListItems = ({
     handleDelete
 }: Props) => {
     return (
-        <div className={styles.listItems}>
+        <div className={styles.listItems} 
+            style={
+                {marginBottom: 12}
+            }>
             <input
                 type='checkbox'
                 onChange={() => handleChecked(item.id)}
@@ -28,7 +31,7 @@ const ListItems = ({
                     textDecoration: item.checked ? 'line-through' : undefined
                 }}
             >{item.item}</div>
-            <Trash onClick={() => handleDelete(item.id)} className={styles.trash} size={20} />
+            <Trash onClick={() => handleDelete(item.id)} className={styles.trash} size={18} />
         </div>
     )
 }
