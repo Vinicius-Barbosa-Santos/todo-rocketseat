@@ -10,22 +10,22 @@ interface Props {
     handleDelete: (id: number) => void
 }
 
-const ListItems = ({ 
-        item, 
-        handleChecked, 
-        handleDelete 
-    }: Props) => {
+const ListItems = ({
+    item,
+    handleChecked,
+    handleDelete
+}: Props) => {
     return (
         <div className={styles.listItems}>
             <input
                 type='checkbox'
                 onChange={() => handleChecked(item.id)}
             />
-            <div 
+            <div
                 className={styles.item}
                 style={{
-                    color : item.checked ? 'var(--gray-300)' : 'var(--gray-100)',
-                    textDecoration : item.checked ? 'line-through' : undefined
+                    color: item.checked ? 'var(--gray-300)' : 'var(--gray-100)',
+                    textDecoration: item.checked ? 'line-through' : undefined
                 }}
             >{item.item}</div>
             <Trash onClick={() => handleDelete(item.id)} className={styles.trash} size={20} />

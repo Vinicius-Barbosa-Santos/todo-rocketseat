@@ -21,7 +21,7 @@ const App = () => {
   const handleChecked = (id: number) => {
     const listItems = items.map((item) => item.id === id ? { ...item, checked: !item.checked } : item)
     setItems(listItems)
-
+    
     const listItemsChecked = listItems.filter((item) => item.checked)
     handleCheckedItemIsTrue(listItemsChecked.length)
   }
