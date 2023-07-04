@@ -9,7 +9,8 @@ import clipboard from '../../assets/clipboard.svg'
 
 interface Props {
     items: ItemListType[],
-    tasks: number
+    tasks: number,
+    tasksFinish: number,
     handleChecked: (id: number) => void,
     handleDelete: (id: number) => void
 }
@@ -17,6 +18,7 @@ interface Props {
 const Content = ({ 
         items, 
         tasks,
+        tasksFinish,
         handleChecked, 
         handleDelete 
     }: Props) => {
@@ -31,7 +33,7 @@ const Content = ({
 
                     <div className={styles.finishTask}>
                         <span className={styles.spanFinish}>Concluídas</span>
-                        <div className={styles.quantityOfTask}>2 de 5</div>
+                        <div className={styles.quantityOfTask}>{tasksFinish} de {tasks}</div>
                     </div>
                 </div>
 
