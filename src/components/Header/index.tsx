@@ -8,10 +8,10 @@ import Input from '../Input'
 import logo from '../../assets/logo.svg'
 
 interface Props {
-    handleAddTask: (item: string) => void
+    onHandleAddTask: (item: string) => void
 }
 
-const Header = ({ handleAddTask }: Props) => {
+const Header = ({ onHandleAddTask }: Props) => {
     return (
         <div className={styles.headerContainer}>
             <div className={styles.headerImage}>
@@ -19,7 +19,7 @@ const Header = ({ handleAddTask }: Props) => {
             </div>
 
             <div className={styles.inputContainer}>
-                <Input handleAddTask={handleAddTask} />
+                <Input handleAddTask={onHandleAddTask} />
             </div>
         </div>
     )

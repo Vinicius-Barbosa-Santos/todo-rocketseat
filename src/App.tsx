@@ -11,11 +11,11 @@ import { useState } from "react"
 
 const App = () => {
   const [tasks, setTasks] = useState<number>(0)
-  const [tasksFinish, setTasksFinish] = useState<number>(0)
   const [items, setItems] = useState<ItemListType[]>([])
+  const [finishTasks, setFinishTasks] = useState<number>(0)
 
   const handleCheckedItemIsTrue = (listItemsChecked: number) => {
-    setTasksFinish(listItemsChecked)
+    setFinishTasks(listItemsChecked)
   }
 
   const handleChecked = (id: number) => {
@@ -49,7 +49,7 @@ const App = () => {
     <div className={styles.container}>
       <header>
         <Header
-          handleAddTask={handleAddTask}
+          onHandleAddTask={handleAddTask}
         />
       </header>
 
@@ -57,9 +57,9 @@ const App = () => {
         <Content
           items={items}
           tasks={tasks}
-          tasksFinish={tasksFinish}
-          handleChecked={handleChecked}
-          handleDelete={handleDelete}
+          finishTasks={finishTasks}
+          onHandleChecked={handleChecked}
+          onHandleDelete={handleDelete}
         />
       </main>
     </div>

@@ -6,23 +6,20 @@ import { Trash } from '@phosphor-icons/react'
 
 interface Props {
     item: ItemListType,
-    handleChecked: (id: number) => void,
-    handleDelete: (id: number) => void
+    onHandleChecked: (id: number) => void,
+    onHandleDelete: (id: number) => void
 }
 
 const ListItems = ({
     item,
-    handleChecked,
-    handleDelete
+    onHandleChecked,
+    onHandleDelete
 }: Props) => {
     return (
-        <div className={styles.listItems} 
-            style={
-                {marginBottom: 12}
-            }>
+        <div className={styles.listItems}>
             <input
                 type='checkbox'
-                onChange={() => handleChecked(item.id)}
+                onChange={() => onHandleChecked(item.id)}
             />
             <div
                 className={styles.item}
@@ -31,7 +28,7 @@ const ListItems = ({
                     textDecoration: item.checked ? 'line-through' : undefined
                 }}
             >{item.item}</div>
-            <Trash onClick={() => handleDelete(item.id)} className={styles.trash} size={18} />
+            <Trash onClick={() => onHandleDelete(item.id)} className={styles.trash} size={18} />
         </div>
     )
 }
