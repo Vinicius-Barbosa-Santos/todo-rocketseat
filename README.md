@@ -17,7 +17,6 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - [Vite](https://vitejs.dev/)
 - [React](https://reactjs.org)
 - [TypeScript](https://www.typescriptlang.org/)
-- [Context API](https://legacy.reactjs.org/docs/context.html)
 
 ## 💻 Projeto
 
