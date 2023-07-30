@@ -20,7 +20,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 💻 Projeto
 
-O DevMemory é um app que foi constrúido como desafio da Rocketseat, o objetivo do projeto era fazer um To-do List.
+O Ignite To do é um app que foi constrúido como desafio da Rocketseat, o objetivo do projeto era fazer um To-do List.
 
 ## 🚀 Como executar
 
