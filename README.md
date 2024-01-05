@@ -26,6 +26,6 @@ O Ignite To-Do é um aplicativo desenvolvido como parte de um desafio proposto p
 
 - Clone o repositório
 - Instale as dependências com `npm`
-- Inicie o servidor com `npm start`
+- Inicie o servidor com `npm run dev`
 
 Agora você pode acessar [`localhost:3000`](http://localhost:3000) do seu navegador.
