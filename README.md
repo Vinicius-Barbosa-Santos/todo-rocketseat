@@ -20,7 +20,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 💻 Projeto
 
-O Ignite To do é um app que foi constrúido como desafio da Rocketseat, o objetivo do projeto era fazer um To-do List.
+O Ignite To-Do é um aplicativo desenvolvido como parte de um desafio proposto pela Rocketseat. O objetivo do projeto era criar uma lista de tarefas (To-Do List).
 
 ## 🚀 Como executar
 
